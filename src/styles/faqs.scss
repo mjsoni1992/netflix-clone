@@ -1,0 +1,38 @@
+.faqsSection {
+    padding: 70px 45px;
+    border-bottom: 8px solid #222;
+
+    h2 {
+        font-size: 3.125rem;
+        line-height: 1.1;
+        margin-bottom: 3.5rem;
+        text-align: center;
+    }
+
+    .accWrapper {
+        margin-bottom: 10px;
+
+        h3 {
+            padding: .8em 2.2em .8em 1.2em;
+            margin-bottom: 1px;
+            font-weight: 400;
+            position: relative;
+            width: 100%;
+            border: 0;
+            background: #303030;
+            cursor: pointer;
+
+            span {
+                float: right;
+            }
+        }
+
+        .accDesc {
+            background-color: #303030;
+            padding: .8em 2.2em .8em 1.2em;
+            background: #303030;
+            font-size: 22px;
+
+        }
+    }
+}

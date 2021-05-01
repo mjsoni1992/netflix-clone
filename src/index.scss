@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.featuredSection {
+  border-bottom: 8px solid #222;
+  padding: 70px 45px;
+
+  .featuredTitle {
+    font-size: 3.125rem;
+  }
+
+  .featuredSubTitle {
+    font-size: 25px;
+  }
+}
+
+@import "./styles/header/header.scss";
+@import "./styles/header/heroSection.scss";
+@import "./styles/faqs.scss";
+@import "./styles/footer/footer.scss";
+@import "./styles/signinform.scss";

@@ -1,0 +1,63 @@
+header {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+
+    .logo {
+        max-width: 134px;
+    }
+
+
+    button {
+        background-color: #e50914;
+        line-height: normal;
+        padding: 8px 17px;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .languageSwitcher {
+        background-color: transparent;
+        color: #fff;
+        -webkit-appearance: none;
+
+        border-radius: 3px;
+        padding-left: 1.375rem;
+        padding-right: 1.375rem;
+        line-height: 1.3em;
+        padding: .5rem 1.375rem;
+        background: rgba(0, 0, 0, .4);
+        border: 1px solid #aaa;
+        color: #fff;
+        font-size: .875rem;
+    }
+
+    .selectLanguageWrapper {
+        margin-right: 20px;
+
+        span.earthIcon {
+            svg {
+                width: 0.7em;
+                position: relative;
+                left: 20px;
+                z-index: 0;
+            }
+        }
+
+        span.selectDownIcon {
+            svg {
+                position: relative;
+                right: 24px;
+                z-index: 0;
+                width: 0.7em;
+            }
+        }
+    }
+
+}
