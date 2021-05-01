@@ -1,9 +1,14 @@
 import React from 'react'
+import Footer from '../footer/Footer'
+import Header from '../header/Header'
+import SignupForm from '../SignupForm'
 
 const Signup = () => {
     return (
         <div>
-            Sign Up page
+            <Header />
+            <SignupForm />
+            <Footer />
         </div>
     )
 }

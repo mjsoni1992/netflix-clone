@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <div class="row">
-                    <div class="col-md-12">
+                <div className="row">
+                    <div className="col-md-12">
                         <p>Questions? Call <a href="tel:1-800-040-4015">1-800-040-4015</a></p>
                     </div>
                     <div className="col-md-3">

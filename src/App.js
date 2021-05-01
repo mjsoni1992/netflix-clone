@@ -3,16 +3,18 @@ import SignIn from "./components/pages/Signin";
 import SignUp from "./components/pages/Signup";
 import Browse from "./components/pages/Browse";
 import { Route, Switch } from 'react-router-dom';
+import { AuthProvider } from "./contexts/AuthContext";
 function App() {
   return (
     <>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/signin" component={SignIn} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/browse" component={Browse} />
-      </Switch>
-
+      <AuthProvider>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/browse" component={Browse} />
+        </Switch>
+      </AuthProvider>
 
     </>
   );
