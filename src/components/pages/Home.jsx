@@ -4,7 +4,16 @@ import HeroSection from '../HeroSection'
 import Footer from "../footer/Footer";
 import homeData from '../../datas/homedata.json';
 import Faqs from '../Faqs';
+import { useAuth } from "../../contexts/AuthContext";
+import { useHistory } from 'react-router-dom';
 const Home = () => {
+
+    const { currentUser } = useAuth();
+    let history = useHistory();
+    if (currentUser) {
+        history.push("/browse");
+    }
+
     return (
         <div>
             <Header />

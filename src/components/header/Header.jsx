@@ -2,7 +2,16 @@ import React from 'react'
 import LanguageIcon from '@material-ui/icons/Language';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'react-router-dom';
+import { useAuth } from "../../contexts/AuthContext";
+
+
 const Header = () => {
+
+    const { currentUser, signout } = useAuth();
+
+
+
+
     return (
         <header>
             <div className="container">
@@ -21,7 +30,8 @@ const Header = () => {
                                 <span className="selectDownIcon"><ArrowDropDownIcon /></span>
                             </div>
                             <div className="signInUpLinksWrapper d-inline">
-                                <Link to="/signin"><button>Sign In</button> </Link>
+
+                                {!currentUser ? <Link to="/signin"><button>Sign In</button> </Link> : <button onClick={signout}>Sign Out</button>}
 
                             </div>
                         </div>

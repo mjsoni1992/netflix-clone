@@ -13,7 +13,7 @@ const SignupForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        signup(emailRef.current.value, passwordRef.current.value);
+        signup(emailRef.current.value, passwordRef.current.value, firstNameRef.current.value, lastNameRef.current.value);
         <Route>
             <Redirect to="/signin" />
         </Route>

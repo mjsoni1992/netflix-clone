@@ -1,12 +1,17 @@
+
 import Home from "./components/pages/Home";
 import SignIn from "./components/pages/Signin";
 import SignUp from "./components/pages/Signup";
-import Browse from "./components/pages/Browse";
+import Browse from "./components/pages/browse/Browse";
 import { Route, Switch } from 'react-router-dom';
 import { AuthProvider } from "./contexts/AuthContext";
+
 function App() {
+
+
   return (
     <>
+
       <AuthProvider>
         <Switch>
           <Route path="/" component={Home} exact />
@@ -15,6 +20,7 @@ function App() {
           <Route path="/browse" component={Browse} />
         </Switch>
       </AuthProvider>
+
 
     </>
   );

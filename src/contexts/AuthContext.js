@@ -11,8 +11,28 @@ export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState();
 
 
-    function signup(email, password) {
-        return auth.createUserWithEmailAndPassword(email, password)
+    function signup(email, password, firstName, lastName) {
+        return auth.createUserWithEmailAndPassword(email, password).then((result) => {
+            return result.user.updateProfile({
+                displayName: firstName.value
+            })
+
+        });
+    }
+    function signin(email, password) {
+        return auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
+            alert("User Signed In");
+            var user = userCredential.user;
+            console.log(user);
+
+        }).catch((error) => {
+            alert("Something Went Wrong!");
+        });
+    }
+    function signout() {
+        return auth.signOut().then(() => {
+            alert("User Signed Out");
+        });
     }
     useEffect(() => {
         auth.onAuthStateChanged(user => {
@@ -24,7 +44,9 @@ export function AuthProvider({ children }) {
 
     const value = {
         currentUser,
-        signup
+        signup,
+        signin,
+        signout
     }
     return (
         <AuthContext.Provider value={value}>
