@@ -1,9 +1,9 @@
 .netflixOriginals {
-    padding: 50px 0;
+    padding: 50px 0 0;
 
     h4 {
         padding-left: 50px;
-        margin-bottom: 35px;
+
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 700;
@@ -11,9 +11,10 @@
 
     .imgWrapper {
         display: flex;
+        overflow-y: hidden;
         overflow-x: scroll;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         img {
             max-height: 250px;
@@ -21,6 +22,7 @@
             margin-right: 15px;
             border: 3px solid #000;
             transition: all 0.3s;
+            cursor: pointer;
 
             &:hover {
                 transform: scale(1.2);

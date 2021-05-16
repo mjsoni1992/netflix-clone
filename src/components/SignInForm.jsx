@@ -21,8 +21,8 @@ const SigninForm = () => {
                     <div className="formWrapper">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h2>Sign In</h2>
-                            <input type="email" name="email" placeholder="Email Address" {...register("email")} />
-                            <input type="password" name="password" placeholder="Password" {...register("password")} />
+                            <input required type="email" autoComplete="off" name="email" placeholder="Email Address" {...register("email")} />
+                            <input required type="password" autoComplete="off" name="password" placeholder="Password" {...register("password")} />
                             <input type="submit" value="Sign In" />
                             <div className="needhelp">
                                 <div>

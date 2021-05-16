@@ -31,6 +31,44 @@ img {
   }
 }
 
+.closeVideo {
+  float: right;
+  background-color: #e50914;
+  display: inline-block;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-right: 25px;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 @import "./styles/header/header.scss";
 @import "./styles/header/heroSection.scss";
 @import "./styles/faqs.scss";

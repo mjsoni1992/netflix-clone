@@ -34,6 +34,7 @@ const HeroBanner = () => {
                     <h1>{heroBannerData && heroBannerData.title}</h1>
                     <p className="mb-5 mt-4">{heroBannerData && heroBannerData.overview}</p>
                     <button>Play</button>
+                    <button>My List</button>
                 </div>
 
             </div>

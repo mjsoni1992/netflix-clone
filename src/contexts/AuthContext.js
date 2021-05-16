@@ -1,13 +1,18 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase";
-
+import { useHistory } from 'react-router-dom';
 const AuthContext = React.createContext();
+
+
+
+
 export function useAuth() {
+
     return useContext(AuthContext)
 }
 
 export function AuthProvider({ children }) {
-
+    let history = useHistory();
     const [currentUser, setCurrentUser] = useState();
 
 
@@ -21,7 +26,7 @@ export function AuthProvider({ children }) {
     }
     function signin(email, password) {
         return auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
-            alert("User Signed In");
+            console.log("User Signed In");
             var user = userCredential.user;
             console.log(user);
 
@@ -30,8 +35,13 @@ export function AuthProvider({ children }) {
         });
     }
     function signout() {
+
         return auth.signOut().then(() => {
-            alert("User Signed Out");
+
+            console.log("User Signed Out");
+            history.push("/signin");
+            console.log("history called");
+
         });
     }
     useEffect(() => {

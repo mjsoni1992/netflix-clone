@@ -28,10 +28,10 @@ const SignupForm = () => {
                     <div className="formWrapper">
                         <form onSubmit={handleSubmit}>
                             <h2>Sign Up</h2>
-                            <input ref={firstNameRef} type="text" name="first_name" placeholder="First Name" />
-                            <input ref={lastNameRef} type="text" name="last_name" placeholder="Last Name" />
-                            <input ref={emailRef} type="email" name="email" placeholder="Email Address" />
-                            <input ref={passwordRef} type="password" name="password" placeholder="Password" />
+                            <input required autoComplete="off" ref={firstNameRef} type="text" name="first_name" placeholder="First Name" />
+                            <input required autoComplete="off" ref={lastNameRef} type="text" name="last_name" placeholder="Last Name" />
+                            <input required autoComplete="off" ref={emailRef} type="email" name="email" placeholder="Email Address" />
+                            <input required autoComplete="off" ref={passwordRef} type="password" name="password" placeholder="Password" />
                             <input type="submit" value="Sign Up" />
                             <div className="signupMeta">
                                 <p className="text-left">Already have an account?  Please <Link to="/signin">Sign In</Link></p>
