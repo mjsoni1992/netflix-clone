@@ -1,0 +1,65 @@
+@media screen and (max-width:767px) {
+    section.heroSection .contentWrapper h1 {
+        font-size: 40px;
+    }
+
+    section.heroSection .contentWrapper form {
+        display: block;
+    }
+
+    section.heroSection .contentWrapper form input[type=text] {
+        width: 100%;
+    }
+
+    section.heroSection .contentWrapper form input[type=submit] {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .featuredSection,
+    .faqsSection,
+    footer {
+        padding: 35px 0;
+    }
+
+    .featuredSection .featuredTitle,
+    .faqsSection h2 {
+        font-size: 35px;
+    }
+
+    .featuredSection .featuredSubTitle {
+        font-size: 18px;
+    }
+
+    .featuredSection img {
+        width: 100%;
+    }
+
+    .faqsSection .accWrapper h3 {
+        font-size: 16px;
+    }
+
+    header .col-md-3 {
+        text-align: center;
+    }
+
+    header .languageWrapper {
+        text-align: center !important;
+        margin-top: 25px;
+
+    }
+
+    section.heroSection .contentWrapper h3 {
+        margin-top: 0px;
+    }
+
+    .signInComponent .formWrapper {
+        margin-top: 150px;
+        padding: 60px 20px 40px;
+        min-height: 500px;
+    }
+
+    footer .languageWrapper .selectLanguageWrapper {
+        margin-left: -25px;
+    }
+}
