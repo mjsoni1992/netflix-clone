@@ -52,6 +52,13 @@
                 margin-top: 35px;
             }
 
+            button[type=button] {
+                background: transparent;
+                border: none;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+
             .needhelp {
                 display: flex;
                 justify-content: space-between;

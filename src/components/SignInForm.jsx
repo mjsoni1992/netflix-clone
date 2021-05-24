@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { useForm } from "react-hook-form";
+import firebase from "firebase/app";
+import gmailImage from "../img/gmailsignin.png";
+
 
 const SigninForm = () => {
     const { signin } = useAuth();
@@ -12,8 +15,22 @@ const SigninForm = () => {
         signin(data.email, data.password)
     };
 
+    useEffect(() => {
 
 
+    }, []);
+    const handleClickGoogleSignin = () => {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+
+                var user = result.user;
+                // ...
+            }).catch((error) => {
+
+            });
+    }
     return (
         <section className="signInComponent">
             <div className="container">
@@ -24,6 +41,10 @@ const SigninForm = () => {
                             <input required type="email" autoComplete="off" name="email" placeholder="Email Address" {...register("email")} />
                             <input required type="password" autoComplete="off" name="password" placeholder="Password" {...register("password")} />
                             <input type="submit" value="Sign In" />
+                            <button className="signinwithGmail" type="button" onClick={handleClickGoogleSignin}>
+                                <img src={gmailImage} />
+                            </button>
+
                             <div className="needhelp">
                                 <div>
                                     <input type="checkbox" /> Remember Me
