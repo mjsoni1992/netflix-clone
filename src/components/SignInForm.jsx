@@ -26,9 +26,9 @@ const SigninForm = () => {
             .then((result) => {
 
                 var user = result.user;
-                // ...
+                console.log("user ", user.message);
             }).catch((error) => {
-
+                console.log("error", error)
             });
     }
     return (
